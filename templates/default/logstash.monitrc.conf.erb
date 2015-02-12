@@ -1,0 +1,6 @@
+# Documentation: http://mmonit.com/monit/documentation/monit.html
+
+check process logstash with pidfile "/var/run/logstash.pid"
+  start program = "/etc/init.d/logstash start" with timeout 30 seconds
+  stop program  = "/etc/init.d/logstash stop"
+  group logstash
